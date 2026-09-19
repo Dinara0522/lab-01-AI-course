@@ -75,3 +75,14 @@ def cost_usd(model_key: str, input_tokens: int, output_tokens: int) -> float:
         input_tokens * model.input_per_mtok
         + output_tokens * model.output_per_mtok
     ) / 1_000_000
+
+GEMINI_INPUT_PER_MTOK = 0.75
+GEMINI_OUTPUT_PER_MTOK = 3.75
+
+
+def gemini_cost_usd(input_tokens: int, output_tokens: int) -> float:
+    """Return Gemini list-price cost of one request in US dollars."""
+    return (
+        input_tokens * GEMINI_INPUT_PER_MTOK
+        + output_tokens * GEMINI_OUTPUT_PER_MTOK
+    ) / 1_000_000

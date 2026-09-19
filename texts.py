@@ -69,9 +69,34 @@ SYSTEM_PROMPT: Dict[str, str] = {
     ),
 }
 
+#: Fourth parallel corpus item for the extension task.
+QUESTION: Dict[str, str] = {
+    "en": (
+        "Why was a service fee charged to my account this month?"
+    ),
+    "ru": (
+        "Почему в этом месяце с моего счёта была списана комиссия за обслуживание?"
+    ),
+    "kk": (
+        "Неліктен осы айда менің шотымнан қызмет көрсету үшін комиссия алынды?"
+    ),
+}
+
+KAZAKH_COMMON: Dict[str, str] = {
+    "en": "",
+    "ru": "",
+    "kk": "Банк клиентке несие туралы хабар жасады.",
+}
+
+KAZAKH_SPECIFIC: Dict[str, str] = {
+    "en": "",
+    "ru": "",
+    "kk": "Банк клиентке жаңа несие шартын түсіндірді.",
+}
 #: Everything the lab measures, keyed by a short id.
 CORPUS: Dict[str, Dict[str, str]] = {
     "sentence": SENTENCE,
     "complaint": COMPLAINT,
     "system_prompt": SYSTEM_PROMPT,
+    "question": QUESTION,
 }
